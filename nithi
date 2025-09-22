@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nithika Shree - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+    body {background: #fdfdfb; color: #333; line-height:1.6; scroll-behavior: smooth;}
+
+    header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 50px;
+      background:#e8f5e9;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 12px rgba(0,0,0,0.15);
+      transition: background 0.3s;
+      flex-wrap: wrap;
+    }
+    header.scrolled {background:#c8e6c9;}
+    header h1 {color:#2e7d32; font-weight:700; font-size:1.8rem; flex:1;}
+    nav {display:flex; gap:15px; flex-wrap:wrap;}
+    nav a {text-decoration:none; color:#333; font-weight:500; position:relative;}
+    nav a::after {content:''; display:block; width:0; height:2px; background:#2e7d32; transition:width .3s;}
+    nav a:hover::after {width:100%;}
+
+    .hero {display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:80px 20px; background:linear-gradient(135deg,#d0f0c0,#ffffff);}
+    .hero img {width:180px; height:180px; border-radius:50%; margin-bottom:20px; box-shadow:0 12px 25px rgba(0,0,0,0.25); border:4px solid #2e7d32;}
+    .hero h2 {font-size:2.5rem; color:#2e7d32; margin-bottom:10px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);}
+    .hero p {font-size:1.2rem; margin-bottom:20px; max-width:600px;}
+    .btn {display:inline-block; padding:12px 25px; background:#2e7d32; color:#fff; border-radius:30px; text-decoration:none; font-weight:500; transition: all 0.3s; box-shadow:0 5px 15px rgba(46,125,50,0.4);}
+    .btn:hover {background:#388e3c; transform:scale(1.1); box-shadow:0 8px 20px rgba(46,125,50,0.5);}
+
+    section {padding:80px 20px; max-width:1100px; margin:auto;}
+    section h3 {text-align:center; font-size:2rem; margin-bottom:40px; color:#2e7d32; letter-spacing:1px;}
+
+    .card {background: rgba(255,255,255,0.85); backdrop-filter: blur(15px); padding:25px; border-radius:25px; box-shadow: 0 12px 25px rgba(0,0,0,0.15); margin-bottom:25px; transition: transform 0.4s, box-shadow 0.4s;}
+    .card:hover {transform: translateY(-8px); box-shadow:0 15px 35px rgba(0,0,0,0.2);}
+
+    .skills-grid, .projects-grid, .achievements-grid {display:grid; gap:25px;}
+    .skills-grid {grid-template-columns:repeat(auto-fit, minmax(150px,1fr));}
+    .projects-grid {grid-template-columns:repeat(auto-fit, minmax(260px,1fr));}
+    .achievements-grid {grid-template-columns:repeat(auto-fit, minmax(250px,1fr));}
+    .achievements-grid .card {display:flex; align-items:center; justify-content:center; font-size:1.05rem; font-weight:500;}
+
+    .internships-container {display:flex; gap:40px; flex-wrap:wrap;}
+    .intern-card {flex:1; display:flex; gap:20px; align-items:flex-start; transition: transform 0.4s;}
+    .intern-card:hover {transform: translateY(-5px);}
+    .intern-card img {width:140px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.15);}
+    .intern-card .intern-desc {flex:1;}
+    .intern-card .intern-desc h4 {color:#2e7d32; margin-bottom:10px;}
+
+    footer {text-align:center; padding:25px; background:#e8f5e9; margin-top:50px; font-weight:500;}
+
+    @media(max-width:1024px){.internships-container{flex-direction:column;}}
+    @media(max-width:768px){header{flex-direction:column; align-items:center;} nav{margin-top:10px; justify-content:center;} .intern-card{flex-direction:column; align-items:center;} .intern-card img{margin-bottom:15px;}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#internship">Internship</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#languages">Languages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="https://media.licdn.com/dms/image/v2/D5603AQHyKhpmZra4ww/profile-displayphoto-scale_200_200/B56ZhugEwdHQAY-/0/1754200561764?e=2147483647&v=beta&t=Tw8csH9zzotZybC7Of-DqEuQSPrQmS2xGtm3Ikh6feU" alt="Nithika Shree M S">
+    <h2>Nithika Shree M S</h2>
+    <p>Pre-final year IT student passionate about becoming a software engineer in a product-based company.</p>
+    <a href="mailto:nithikashreesekar266@gmail.com" class="btn">Email Me</a>
+  </section>
+
+  <section id="about">
+    <h3>About Me</h3>
+    <div class="card intern-card">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.E22lLBVxekW6w-URmqxABwHaE6?pid=Api&P=0&h=180" alt="About Me Image">
+      <p>I am a pre-final year Information Technology student at Sri Sai Ram Engineering College, driven by innovation and eager to build impactful software solutions. Skilled in coding, designing, and problem-solving, I aim to create products that combine technology and user-centric design effectively.</p>
+    </div>
+  </section>
+
+  <section id="internship">
+    <h3>Internships</h3>
+    <div class="internships-container">
+      <div class="card intern-card">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.u2hnVT-InRPtrBEhKLCuuwHaDH?pid=Api&P=0&h=180" alt="MSME Bhavan">
+        <div class="intern-desc">
+          <h4>Deep Learning Developer Intern - MSME Bhavan, CITD Extension Centre</h4>
+          <p>Built and optimized deep learning models for practical applications. Worked on data preprocessing, model evaluation, and implementing ML pipelines for automation, gaining hands-on experience in Python and TensorFlow.</p>
+        </div>
+      </div>
+      <div class="card intern-card">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.tmF7AygLYIHn1nY_e154HAHaFj?pid=Api&P=0&h=180" alt="NIC">
+        <div class="intern-desc">
+          <h4>AI Engineer Intern - National Informatics Centre, Rajaji Bhavan</h4>
+          <p>Developed AI-powered applications to enhance government digital services. Worked on Flask-based apps, data pipelines, and intelligent modules to improve efficiency and accessibility of public systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h3>Skills</h3>
+    <div class="skills-grid">
+      <div class="card">Java</div>
+      <div class="card">Python (Machine Learning)</div>
+      <div class="card">C</div>
+      <div class="card">HTML & CSS</div>
+      <div class="card">JavaScript</div>
+      <div class="card">Designing</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="projects-grid">
+      <div class="card"><strong>ECOHARVEST</strong><br> Circular economy based organic waste processing and fertilizer generation.</div>
+      <div class="card"><strong>Automated Water Tank Purging System</strong><br> Large-scale automated system for water management and purification.</div>
+      <div class="card"><strong>Civic Reporting System</strong><br> Platform for citizens to report civic issues effectively.</div>
+      <div class="card"><strong>Skill Swap</strong><br> Software for exchanging and learning skills without monetary exchange.</div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h3>Achievements</h3>
+    <div class="achievements-grid">
+      <div class="card"> Winner: MyGov Task - Transforming Waste to Art (Rank 1)</div>
+      <div class="card"> Selected as Student Leader - Global Emerging Leadership Program (GELP)</div>
+      <div class="card"> Campus Ambassador - IEEE CS SYP High Impact Zonal Events</div>
+      <div class="card"> Graphic Designer - IEEE YESIST12</div>
+      <div class="card"> Change Maker Recognition - MyGov</div>
+    </div>
+  </section>
+
+  <section id="languages">
+    <h3>Languages Known</h3>
+    <div class="skills-grid">
+      <div class="card">English</div>
+      <div class="card">Tamil</div>
+      <div class="card">Hindi</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3>Contact</h3>
+    <div class="card">
+      <p>Email: <a href="mailto:nithikashreesekar266@gmail.com">nithikashreesekar266@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/nithika7" target="_blank">linkedin.com/in/nithika7</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Nithika Shree M S</p>
+  </footer>
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const revealOnScroll = () => {
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 50) {
+          card.style.opacity = 1;
+          card.style.transform = 'translateY(0)';
+        }
+      });
+    };
+    cards.forEach(card => {card.style.opacity=0; card.style.transform='translateY(30px)'; card.style.transition='all 0.6s ease-out';});
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    window.addEventListener('scroll', ()=>{
+      document.querySelector('header').classList.toggle('scrolled', window.scrollY>50);
+    });
+  </script>
+</body>
+</html>
